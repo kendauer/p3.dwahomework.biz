@@ -1,0 +1,124 @@
+body {
+	overflow:visible;
+	word-wrap:break-word;
+	width: 1000px;
+	background-color: #f3f3f3;
+}
+
+/*stle for the title/banner of the page */
+#title {
+	width: 600px;
+	margin-left: 200px;
+	text-align: center;
+	font-variant: small-caps;
+	font-size: 2.2em;
+	color: black;
+}
+
+#title a {
+	text-decoration: none;
+	color: black;
+}
+
+/* style for the navigation menu */
+#menu {
+	width: 600px;
+	margin-left: 200px;
+	text-align: center;
+	color: rgba(162,161,165,0.63)
+}
+
+#menu a {
+	margin-left: 10px;
+	text-decoration: none;
+	color: #a11010;
+	font-weight: bold;
+	font-variant: small-caps;
+	font-size: 1.2em;
+}
+
+hr.blue {
+	color: #669BB5;
+	background-color: #669BB5;
+	height: 3px;
+	width: 600px;
+	margin-left: 200px;
+}
+
+/* the outerbox that wraps all content */
+.outerBox {
+	width: 600px;
+	margin-left: 200px;
+	background-color: rgb(232, 232, 232);
+	padding-bottom: 100px;
+	border-radius:25px;
+	box-shadow: 7px 7px 3px #888888;
+}
+
+/* style for the actual content itself */
+.innerBox {
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 20px;
+	font-family: monospace;
+	font-size: 1.20em;
+}
+
+.piece {
+	width: 150px;
+	height: 150px;
+	background-color: red;
+	float: left;
+	border: solid 1px black;
+}
+
+#piece1 {
+	background-color: red;
+}
+
+#piece2 {
+	background-color: green;
+}
+
+#piece3 {
+	background-color: blue;
+}
+
+#piece4 {
+	background-color: red;
+}
+
+#piece5 {
+	background-color: green;
+}
+
+#piece6 {
+	background-color: blue;
+}
+
+#piece7 {
+	background-color: red;
+}
+
+#piece8 {
+	background-color: green;
+}
+
+#piece9 {
+	background-color: blue;
+}
+
+
+
+/* style for the page footer */
+footer {
+	clear: both;
+	padding-top: 1em;
+	text-align: center;
+	font-size: .75em;
+}
+
+/* for any error messages */
+.error {
+	color: red;
+}
