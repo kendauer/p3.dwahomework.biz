@@ -21,19 +21,19 @@ body {
 }
 
 /* style for the navigation menu */
-#menu {
-	width: 600px;
-	margin-left: 200px;
+#results {
+	font-size: 1.5em;
+	font-weight: bold;
+	clear: both;
+	height: 50px;
+	color: rgba(20,121,85,0.63);
 	text-align: center;
-	color: rgba(162,161,165,0.63)
 }
 
-#menu a {
-	margin-left: 10px;
-	text-decoration: none;
-	color: #a11010;
+#scoreBoard {
+	padding-left: 75px;
+	padding-bottom: 10px;
 	font-weight: bold;
-	font-variant: small-caps;
 	font-size: 1.2em;
 }
 
@@ -58,7 +58,7 @@ hr.blue {
 /* style for the actual content itself */
 .innerBox {
 	padding-top: 50px;
-	padding-left: 50px;
+	padding-left: 75px;
 	padding-right: 20px;
 	font-family: monospace;
 	font-size: 1.20em;
@@ -72,41 +72,7 @@ hr.blue {
 	border: solid 1px black;
 }
 
-#piece1 {
-	background-color: red;
-}
 
-#piece2 {
-	background-color: green;
-}
-
-#piece3 {
-	background-color: blue;
-}
-
-#piece4 {
-	background-color: red;
-}
-
-#piece5 {
-	background-color: green;
-}
-
-#piece6 {
-	background-color: blue;
-}
-
-#piece7 {
-	background-color: red;
-}
-
-#piece8 {
-	background-color: green;
-}
-
-#piece9 {
-	background-color: blue;
-}
 
 
 
@@ -122,3 +88,44 @@ footer {
 .error {
 	color: red;
 }
+
+#buttons {
+padding-top: 20px;
+	padding-left: 100px;
+	clear: both;
+
+}
+
+/* Button design curtosy of css-tricks.com */
+
+.button {
+   border-top: 1px solid #2a3b45;
+   background: #4a7796;
+   background: -webkit-gradient(linear, left top, left bottom, from(#388c88), to(#4a7796));
+   background: -webkit-linear-gradient(top, #388c88, #4a7796);
+   background: -moz-linear-gradient(top, #388c88, #4a7796);
+   background: -ms-linear-gradient(top, #388c88, #4a7796);
+   background: -o-linear-gradient(top, #388c88, #4a7796);
+   padding: 6px 12px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #fce5fc;
+   font-size: 14px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #26524b;
+   background: #26524b;
+   color: #fcf9fc;
+   }
+.button:active {
+   border-top-color: #358bc4;
+   background: #358bc4;
+   }
