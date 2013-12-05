@@ -14,6 +14,8 @@
   
   // this variable is used to make sure someone can't start the game prematurely
   var gameStart = false;
+  
+  var forfeitGame = false;
 
   // after the page loads, put up the scoreboard and then create a new board
   $(document).ready(function () {
@@ -31,6 +33,7 @@
 
 	  window.gameOver = false;
 	  window.gameStart = false;
+	  window.forfeitGame = false;
 
       $('#results').html("");
 
@@ -97,9 +100,10 @@
 
       if (gameStart == true && piece1CurrentColor == colors[piece1Color] && piece2CurrentColor == colors[piece2Color] && piece3CurrentColor == colors[piece3Color] && piece4CurrentColor == colors[piece4Color] && piece5CurrentColor == colors[piece5Color] && piece6CurrentColor == colors[piece6Color] && piece7CurrentColor == colors[piece7Color] && piece8CurrentColor == colors[piece8Color] && piece9CurrentColor == colors[piece9Color]) {
 
-          $('#results').html("You win!");
+
           
-          	if (gameOver == false) {
+          	if (gameOver == false && forfeitGame == false) {
+          	    $('#results').html("You win!");
 			  	window.gameOver = true;
 			  	window.wins = wins + 1;
 			  	$('#scoreBoard').html("Wins: " + wins + " Losses: " + losses + " Forfeits: " + forfeits);
@@ -111,8 +115,8 @@
       }
       
       else {
-          $('#results').html("You lose!");
             if (gameOver == false) {
+            	$('#results').html("You lose!");
             	window.gameOver = true;
 				window.losses = losses + 1;
 				$('#scoreBoard').html("Wins: " + wins + " Losses: " + losses + " Forfeits: " + forfeits);
@@ -129,6 +133,8 @@
  
   // after clicking the give-up button, show the solution
    $('#giveUp').click(function () {
+      
+     
       $('#piece1').css('background-color', colors[piece1Color]);
       $('#piece2').css('background-color', colors[piece2Color]);
       $('#piece3').css('background-color', colors[piece3Color]);
@@ -139,7 +145,10 @@
       $('#piece8').css('background-color', colors[piece8Color]);
       $('#piece9').css('background-color', colors[piece9Color]);
 
-      window.forfeits = forfeits + 1;
-
+       if (gameOver == false) {window.forfeits = forfeits + 1;
+      window.gameOver = true;
+      window.forfeitGame = true;
+	  
       $('#scoreBoard').html("Wins: " + wins + " Losses: " + losses + " Forfeits: " + forfeits);
+      }
   })
