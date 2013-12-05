@@ -24,12 +24,12 @@ body {
 
 /* style for the result, i.e. win/loss */
 #results {
-	font-size: 1.5em;
+	font-size: 1.75em;
 	font-weight: bold;
 	clear: both;
 	height: 50px;
-	color: rgba(20,121,85,0.63);
 	text-align: center;
+	color: rgba(25,30,30,0.63);
 }
 
 /* the scoreboard shows wins, losses, and forfeits */

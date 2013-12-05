@@ -9,6 +9,11 @@
   var losses = 0;
   var forfeits = 0;
 
+  // this variable is used to ensure user can only get credit for 1 win/loss per game
+  var gameOver = false;
+  
+  // this variable is used to make sure someone can't start the game prematurely
+  var gameStart = false;
 
   // after the page loads, put up the scoreboard and then create a new board
   $(document).ready(function () {
@@ -23,6 +28,9 @@
   	 the colors array, change each piece to the random color and then after seven seconds, turn
   	 all pieces black */
   function newBoard() {
+
+	  window.gameOver = false;
+	  window.gameStart = false;
 
       $('#results').html("");
 
@@ -53,6 +61,8 @@
   // Turns the board black
   function blackBoard() {
       $('.piece').css('background-color', "black");
+      $('.piece').css('border', "1px solid white");
+      window.gameStart = true;
   }
 
   /* if the user clicks on the piece and it's red, turn it green, if green, turn blue, else, turn 
@@ -85,17 +95,28 @@
       var piece9CurrentColor = $('#piece9').css('background-color');
 
 
-      if (piece1CurrentColor == colors[piece1Color] && piece2CurrentColor == colors[piece2Color] && piece3CurrentColor == colors[piece3Color] && piece4CurrentColor == colors[piece4Color] && piece5CurrentColor == colors[piece5Color] && piece6CurrentColor == colors[piece6Color] && piece7CurrentColor == colors[piece7Color] && piece8CurrentColor == colors[piece8Color] && piece9CurrentColor == colors[piece9Color]
+      if (gameStart == true && piece1CurrentColor == colors[piece1Color] && piece2CurrentColor == colors[piece2Color] && piece3CurrentColor == colors[piece3Color] && piece4CurrentColor == colors[piece4Color] && piece5CurrentColor == colors[piece5Color] && piece6CurrentColor == colors[piece6Color] && piece7CurrentColor == colors[piece7Color] && piece8CurrentColor == colors[piece8Color] && piece9CurrentColor == colors[piece9Color]) {
 
-      ) {
           $('#results').html("You win!");
-          window.wins = wins + 1;
-          $('#scoreBoard').html("Wins: " + wins + " Losses: " + losses + " Forfeits: " + forfeits);
-
-      } else {
+          
+          	if (gameOver == false) {
+			  	window.gameOver = true;
+			  	window.wins = wins + 1;
+			  	$('#scoreBoard').html("Wins: " + wins + " Losses: " + losses + " Forfeits: " + forfeits);
+			}
+      } 
+      
+      else if (gameStart == false) {
+	      $('#results').html("Wait!");
+      }
+      
+      else {
           $('#results').html("You lose!");
-          window.losses = losses + 1;
-          $('#scoreBoard').html("Wins: " + wins + " Losses: " + losses + " Forfeits: " + forfeits);
+            if (gameOver == false) {
+            	window.gameOver = true;
+				window.losses = losses + 1;
+				$('#scoreBoard').html("Wins: " + wins + " Losses: " + losses + " Forfeits: " + forfeits);
+			}
       }
   })
 
