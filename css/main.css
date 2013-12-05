@@ -1,3 +1,5 @@
+/* Overall body style */
+
 body {
 	overflow:visible;
 	word-wrap:break-word;
@@ -5,7 +7,7 @@ body {
 	background-color: #f3f3f3;
 }
 
-/*stle for the title/banner of the page */
+/*style for the title/banner of the page */
 #title {
 	width: 600px;
 	margin-left: 200px;
@@ -20,7 +22,7 @@ body {
 	color: black;
 }
 
-/* style for the navigation menu */
+/* style for the result, i.e. win/loss */
 #results {
 	font-size: 1.5em;
 	font-weight: bold;
@@ -30,6 +32,7 @@ body {
 	text-align: center;
 }
 
+/* the scoreboard shows wins, losses, and forfeits */
 #scoreBoard {
 	padding-left: 75px;
 	padding-bottom: 10px;
@@ -37,6 +40,7 @@ body {
 	font-size: 1.2em;
 }
 
+/* Separates the title from the content */
 hr.blue {
 	color: #669BB5;
 	background-color: #669BB5;
@@ -64,6 +68,8 @@ hr.blue {
 	font-size: 1.20em;
 }
 
+/* style for the piece class*/
+
 .piece {
 	width: 150px;
 	height: 150px;
@@ -72,9 +78,12 @@ hr.blue {
 	border: solid 1px black;
 }
 
-
-
-
+/* style for the container containing the three buttons at the bottom*/
+#buttons {
+	padding-top: 20px;
+	padding-left: 100px;
+	clear: both;
+}
 
 /* style for the page footer */
 footer {
@@ -89,43 +98,38 @@ footer {
 	color: red;
 }
 
-#buttons {
-padding-top: 20px;
-	padding-left: 100px;
-	clear: both;
-
-}
-
 /* Button design curtosy of css-tricks.com */
 
 .button {
-   border-top: 1px solid #2a3b45;
-   background: #4a7796;
-   background: -webkit-gradient(linear, left top, left bottom, from(#388c88), to(#4a7796));
-   background: -webkit-linear-gradient(top, #388c88, #4a7796);
-   background: -moz-linear-gradient(top, #388c88, #4a7796);
-   background: -ms-linear-gradient(top, #388c88, #4a7796);
-   background: -o-linear-gradient(top, #388c88, #4a7796);
-   padding: 6px 12px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   border-radius: 8px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: #fce5fc;
-   font-size: 14px;
-   font-family: Helvetica, Arial, Sans-Serif;
-   text-decoration: none;
-   vertical-align: middle;
-   }
+   	border-top: 1px solid #2a3b45;
+   	background: #4a7796;
+   	background: -webkit-gradient(linear, left top, left bottom, from(#388c88), to(#4a7796));
+   	background: -webkit-linear-gradient(top, #388c88, #4a7796);
+   	background: -moz-linear-gradient(top, #388c88, #4a7796);
+   	background: -ms-linear-gradient(top, #388c88, #4a7796);
+   	background: -o-linear-gradient(top, #388c88, #4a7796);
+   	padding: 6px 12px;
+   	-webkit-border-radius: 8px;
+   	-moz-border-radius: 8px;
+   	border-radius: 8px;
+   	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   	box-shadow: rgba(0,0,0,1) 0 1px 0;
+   	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   	color: #fce5fc;
+   	font-size: 14px;
+   	font-family: Helvetica, Arial, Sans-Serif;
+   	text-decoration: none;
+   	vertical-align: middle;
+}
+
 .button:hover {
-   border-top-color: #26524b;
-   background: #26524b;
-   color: #fcf9fc;
-   }
+ 	border-top-color: #26524b;
+    background: #26524b;
+    color: #fcf9fc;
+}
+
 .button:active {
-   border-top-color: #358bc4;
-   background: #358bc4;
-   }
+    border-top-color: #358bc4;
+    background: #358bc4;
+}
