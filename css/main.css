@@ -55,8 +55,8 @@ hr.blue {
 	margin-left: 200px;
 	background-color: rgb(232, 232, 232);
 	padding-bottom: 100px;
-	border-radius:25px;
-	box-shadow: 7px 7px 3px #888888;
+	border-radius:12px;
+	box-shadow: 1px 1px 1px #888888;
 }
 
 /* style for the actual content itself */
@@ -81,7 +81,7 @@ hr.blue {
 /* style for the container containing the three buttons at the bottom*/
 #buttons {
 	padding-top: 20px;
-	padding-left: 100px;
+	padding-left: 68px;
 	clear: both;
 }
 
@@ -101,35 +101,35 @@ footer {
 /* Button design curtosy of css-tricks.com */
 
 .button {
-   	border-top: 1px solid #2a3b45;
-   	background: #4a7796;
-   	background: -webkit-gradient(linear, left top, left bottom, from(#388c88), to(#4a7796));
-   	background: -webkit-linear-gradient(top, #388c88, #4a7796);
-   	background: -moz-linear-gradient(top, #388c88, #4a7796);
-   	background: -ms-linear-gradient(top, #388c88, #4a7796);
-   	background: -o-linear-gradient(top, #388c88, #4a7796);
-   	padding: 6px 12px;
-   	-webkit-border-radius: 8px;
-   	-moz-border-radius: 8px;
-   	border-radius: 8px;
-   	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   	box-shadow: rgba(0,0,0,1) 0 1px 0;
-   	text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   	color: #fce5fc;
-   	font-size: 14px;
-   	font-family: Helvetica, Arial, Sans-Serif;
-   	text-decoration: none;
-   	vertical-align: middle;
+    border-top: 1px solid #87b8d6;
+    background: #5d86a1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6a98b5), to(#5d86a1));
+    background: -webkit-linear-gradient(top, #6a98b5, #5d86a1);
+    background: -moz-linear-gradient(top, #6a98b5, #5d86a1);
+    background: -ms-linear-gradient(top, #6a98b5, #5d86a1);
+    background: -o-linear-gradient(top, #6a98b5, #5d86a1);
+    padding: 6px 12px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: #3d3a3b;
+    font-size: 18px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
 }
 
 .button:hover {
- 	border-top-color: #26524b;
-    background: #26524b;
-    color: #fcf9fc;
+    border-top-color: #9fc0d6;
+    background: #9fc0d6;
+    color: #0d050d;
 }
 
 .button:active {
-    border-top-color: #358bc4;
-    background: #358bc4;
+    border-top-color: #1b435e;
+    background: #1b435e;
 }
